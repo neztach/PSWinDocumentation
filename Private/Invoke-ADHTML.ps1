@@ -1,4 +1,25 @@
 ﻿function Invoke-ADHTML {
+    <#
+    .SYNOPSIS
+    Generates an HTML dashboard based on the provided Active Directory forest data.
+
+    .DESCRIPTION
+    This function generates an interactive HTML dashboard that displays detailed information about the Active Directory forest. It organizes the data into sections and tables for easy visualization.
+
+    .PARAMETER FilePath
+    Specifies the file path where the HTML dashboard will be saved.
+
+    .PARAMETER DataSetForest
+    Specifies the data set containing information about the Active Directory forest.
+
+    .EXAMPLE
+    Invoke-ADHTML -FilePath 'C:\Output\AD_Dashboard.html' -DataSetForest $ForestData
+
+    Generates an HTML dashboard based on the provided Active Directory forest data and saves it to the specified file path.
+
+    .NOTES
+    This function is used to create interactive HTML dashboards for Active Directory forests.
+    #>
     [cmdletBinding()]
     param(
         [string] $FilePath,

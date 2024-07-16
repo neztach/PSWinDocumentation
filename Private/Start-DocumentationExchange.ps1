@@ -1,4 +1,22 @@
 function Start-DocumentationExchange {
+    <#
+    .SYNOPSIS
+    This function starts the documentation process for Exchange services.
+
+    .DESCRIPTION
+    Start-DocumentationExchange initiates the documentation process for Exchange services. It retrieves necessary data and generates documentation in various formats based on the provided parameters.
+
+    .PARAMETER Document
+    Specifies the document object containing configuration details for Exchange documentation.
+
+    .NOTES
+    File Name      : Start-DocumentationExchange.ps1
+    Prerequisite   : This function requires the Test-Configuration function to be run first.
+
+    .EXAMPLE
+    Start-DocumentationExchange -Document $Document
+    Initiates the documentation process for Exchange services based on the specified document object.
+    #>
     [CmdletBinding()]
     param(
         [System.Collections.IDictionary] $Document

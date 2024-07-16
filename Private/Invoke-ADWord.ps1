@@ -1,4 +1,25 @@
 ﻿function Invoke-ADWord {
+    <#
+    .SYNOPSIS
+    Generates a detailed Word document based on the provided Active Directory forest data.
+
+    .DESCRIPTION
+    This function generates a comprehensive Word document that contains low-level documentation of the Active Directory infrastructure within the organization. It provides an overview of the entire environment by exporting and presenting important data from Active Directory.
+
+    .PARAMETER FilePath
+    Specifies the file path where the Word document will be saved.
+
+    .PARAMETER DataSetForest
+    Specifies the data set containing information about the Active Directory forest.
+
+    .EXAMPLE
+    Invoke-ADWord -FilePath 'C:\Output\AD_Document.docx' -DataSetForest $ForestData
+
+    Generates a detailed Word document based on the provided Active Directory forest data and saves it to the specified file path.
+
+    .NOTES
+    This function is used to create detailed documentation of Active Directory forests in Word format.
+    #>
     [cmdletBinding()]
     param(
         [string] $FilePath,

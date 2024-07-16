@@ -1,4 +1,31 @@
 function Get-WinServiceData {
+    <#
+    .SYNOPSIS
+    Retrieves data from various services based on the provided credentials and service type.
+
+    .DESCRIPTION
+    This function connects to different services based on the specified service type and retrieves relevant data using the provided credentials.
+
+    .PARAMETER Credentials
+    Specifies the credentials required to connect to the services.
+
+    .PARAMETER Service
+    Specifies the service details for data retrieval.
+
+    .PARAMETER Type
+    Specifies the type of service to connect to.
+
+    .PARAMETER TypesRequired
+    Specifies the types of data required from the service.
+
+    .EXAMPLE
+    Get-WinServiceData -Credentials $Creds -Service $ServiceDetails -Type 'ActiveDirectory' -TypesRequired @('Type1', 'Type2')
+
+    Retrieves data from Active Directory service with the specified credentials and service details.
+
+    .NOTES
+    This function is used to retrieve data from various services based on the provided parameters.
+    #>
     [CmdletBinding()]
     param (
         [Object] $Credentials,

@@ -1,4 +1,43 @@
 function New-DataBlock {
+    <#
+    .SYNOPSIS
+    Creates a new data block for generating documentation.
+
+    .DESCRIPTION
+    This function creates a new data block for generating documentation based on the provided parameters.
+
+    .PARAMETER WordDocument
+    Specifies the Word document container where the data block will be added.
+
+    .PARAMETER Section
+    Specifies the section details for the data block.
+
+    .PARAMETER Forest
+    Specifies the forest object for the data block.
+
+    .PARAMETER Domain
+    Specifies the domain for the data block.
+
+    .PARAMETER Excel
+    Specifies the Excel package where data will be exported.
+
+    .PARAMETER SectionName
+    Specifies the name of the section.
+
+    .PARAMETER Sql
+    Specifies whether SQL is enabled or disabled globally.
+
+    .PARAMETER ExportWord
+    Indicates whether the data block should be exported to Word.
+
+    .EXAMPLE
+    New-DataBlock -WordDocument $WordDoc -Section $SectionDetails -Forest $ForestObj -Domain 'example.com' -Excel $ExcelPackage -SectionName 'ExampleSection' -Sql $true -ExportWord $true
+
+    Creates a new data block with the specified parameters.
+
+    .NOTES
+    This function is used to generate documentation data blocks.
+    #>
     [CmdletBinding()]
     param(
         [Xceed.Document.NET.Container] $WordDocument,

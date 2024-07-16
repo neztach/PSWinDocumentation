@@ -1,4 +1,23 @@
 function Start-DocumentationO365 {
+    <#
+    .SYNOPSIS
+    This function starts the documentation process for Office 365 services.
+
+    .DESCRIPTION
+    Start-DocumentationO365 initiates the documentation process for Office 365 services. It retrieves necessary data and generates documentation in various formats based on the provided parameters.
+
+    .PARAMETER Document
+    Specifies the document object containing configuration details for Office 365 documentation.
+
+    .NOTES
+    File Name      : Start-DocumentationO365.ps1
+    Prerequisite   : This function requires the Test-Configuration function to be run first.
+
+    .EXAMPLE
+    Start-DocumentationO365 -Document $Document
+    Initiates the documentation process for Office 365 services based on the specified document object.
+
+    #>
     [CmdletBinding()]
     param(
         [System.Collections.IDictionary] $Document

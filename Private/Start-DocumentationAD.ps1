@@ -1,4 +1,22 @@
 function Start-DocumentationAD {
+    <#
+    .SYNOPSIS
+    This function starts the documentation process for Active Directory services.
+
+    .DESCRIPTION
+    Start-DocumentationAD initiates the documentation process for Active Directory services. It retrieves necessary data and generates documentation in various formats based on the provided parameters.
+
+    .PARAMETER Document
+    Specifies the document object containing configuration details for Active Directory documentation.
+
+    .NOTES
+    File Name      : Start-DocumentationAD.ps1
+    Prerequisite   : This function requires the Test-Configuration function to be run first.
+
+    .EXAMPLE
+    Start-DocumentationAD -Document $Document
+    Initiates the documentation process for Active Directory services based on the specified document object.
+    #>
     [CmdletBinding()]
     param(
         [System.Collections.IDictionary] $Document

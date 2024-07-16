@@ -1,4 +1,29 @@
 function Save-WinDataToFile {
+    <#
+    .SYNOPSIS
+    Saves data to a file in XML or JSON format based on the provided parameters.
+
+    .DESCRIPTION
+    This function exports data to a specified file path in either XML or JSON format. It handles offline mode where data is not re-saved.
+
+    .PARAMETER Export
+    Specifies whether to export the data.
+
+    .PARAMETER Type
+    Specifies the type of data being saved.
+
+    .PARAMETER Data
+    Specifies the data to be saved.
+
+    .PARAMETER FilePath
+    Specifies the file path where the data will be saved.
+
+    .PARAMETER IsOffline
+    Indicates if the operation is offline.
+
+    .PARAMETER FileType
+    Specifies the type of file to save the data in. Default is 'XML'.
+    #>
     [cmdletbinding()]
     param(
         [nullable[bool]] $Export,

@@ -1,4 +1,35 @@
 ﻿function Invoke-Documentation {
+    <#
+    .SYNOPSIS
+    This function invokes the documentation process for specified services and generates output in various formats.
+
+    .DESCRIPTION
+    Invoke-Documentation initiates the documentation process for the specified service, such as Active Directory, and generates documentation in HTML, Word, or Excel format based on the provided parameters.
+
+    .PARAMETER Service
+    Specifies the service for which documentation needs to be generated. Currently supports 'ActiveDirectory'.
+
+    .PARAMETER ActiveDirectoryServices
+    Specifies the Active Directory services to be documented.
+
+    .PARAMETER PasswordFile
+    Specifies the file path containing passwords for Active Directory services.
+
+    .PARAMETER PasswordFileHashes
+    Specifies the file path containing password hashes for Active Directory services.
+
+    .PARAMETER Output
+    Specifies the output format(s) for the generated documentation. Supports 'HTML', 'Word', and 'Excel'.
+
+    .PARAMETER FilePath
+    Specifies the file path where the generated documentation will be saved. If not provided, defaults to the desktop with a timestamped file name.
+
+    .EXAMPLE
+    Invoke-Documentation -Service 'ActiveDirectory' -ActiveDirectoryServices $ActiveDirectoryServices -PasswordFile 'C:\Passwords.txt' -PasswordFileHashes 'C:\PasswordHashes.txt' -Output 'Word' -FilePath 'C:\Output'
+
+    Initiates the documentation process for Active Directory services, generates a Word document, and saves it to the specified file path.
+
+    #>
     [cmdletBinding()]
     param(
         [Parameter(Mandatory)][ValidateSet('ActiveDirectory')][string] $Service,

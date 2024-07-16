@@ -1,4 +1,22 @@
 function Start-DocumentationAWS {
+    <#
+    .SYNOPSIS
+    This function starts the documentation process for Amazon Web Services (AWS).
+
+    .DESCRIPTION
+    Start-DocumentationAWS initiates the documentation process for AWS. It retrieves necessary data and generates documentation in various formats based on the provided parameters.
+
+    .PARAMETER Document
+    Specifies the document object containing configuration details for AWS documentation.
+
+    .NOTES
+    File Name      : Start-DocumentationAWS.ps1
+    Prerequisite   : This function requires the Test-Configuration function to be run first.
+
+    .EXAMPLE
+    Start-DocumentationAWS -Document $Document
+    Initiates the documentation process for AWS based on the specified document object.
+    #>
     [CmdletBinding()]
     param(
         [System.Collections.IDictionary] $Document
